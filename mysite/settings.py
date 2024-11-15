@@ -43,12 +43,13 @@ INSTALLED_APPS = [
     'employee.apps.EmployeeConfig',
     'documents.apps.DocumentsConfig',
     'api.apps.ApiConfig',
+    'paiement.apps.PaiementConfig',
 
     #install package
     'rest_framework',
     'drf_yasg',
     'rest_framework_simplejwt',
-    'paiement.apps.PaiementConfig',
+
 ]
 AUTH_USER_MODEL = 'users.UserModels'
 
@@ -134,7 +135,7 @@ DATABASES = {
         # 'PORT': '5432',
 
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'assurhr',
+        'NAME': 'assurtest',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',

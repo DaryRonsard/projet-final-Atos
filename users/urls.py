@@ -18,7 +18,7 @@ from django.urls import path, include
 from rest_framework import routers
 from django.contrib import admin
 
-from users.viewset.user_viewset import UserRegistrationView, UserViewSet
+from users.viewset.user_viewset import UserRegistrationView, UserViewSet, UserEmployeeRegisterView
 
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
@@ -50,5 +50,6 @@ app_name = 'users'
 urlpatterns = [
     path('', include(router.urls)),
     path('create-user/', UserRegistrationView.as_view(), name='register-user'),
+    path('register-user/', UserEmployeeRegisterView.as_view(), name='register-user'),
     #path('update-password/', UserUpdatePasswordView.as_view(), name='update-password'),
 ]
